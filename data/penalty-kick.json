@@ -1,0 +1,10 @@
+[
+	{
+		"matchId" : "1",
+		"incidentId" : "17",
+		"incidentType" : "penalty-kick",
+		"playerId" : "11",
+		"playerName" : "John Gaffney",
+		"incidentTime" : "12:500"
+	}
+]
