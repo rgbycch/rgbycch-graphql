@@ -8,8 +8,6 @@ let tryData = require('./try.json');
 
  export const getAllPlayerDataFromFile = () => playerData;
  export const getPlayerDataFromFile = (playerId)=> playerData.filter(function(player) {
-  console.log(player);
-  console.log(playerId);
   return player.playerId === playerId;
  })
 

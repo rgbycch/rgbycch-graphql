@@ -31,11 +31,13 @@ export const PlayerType = new GraphQLObjectType({
 			description: 'Player DOB'
 		},
 		footDominance: {
-			type: DominanceEnum,
+			//type: DominanceEnum,
+			type: GraphQLString,
 			description: 'Player foot dominance [left, right, either, neither]'
 		},
 		handDominance: {
-			type: DominanceEnum,
+			//type: DominanceEnum,
+			type: GraphQLString,
 			description: 'Player hand dominance [left, right, either, neither]'
 		},
 		position: {

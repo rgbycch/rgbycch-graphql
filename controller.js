@@ -12,11 +12,12 @@ import {
 
 export const getPlayerList = (playerId) => {
 
+	console.log("playerId: "+playerId);
 	if (playerId == null) {
+		console.log("playerId is null; returning player with id '1'");
 		return getPlayerDataFromFile('1');
 	}
 	return getPlayerDataFromFile(playerId);
-
 }
 
 // export const getMatchIncidentList = () => {
@@ -27,7 +28,7 @@ export const getPlayerList = (playerId) => {
 //     		console.log("getMatchIncidentList");
 //         	return res.json();
 //     	})
-//     	.then( (data) => {
+//     	.then( (data) => {a
 //         	console.log(data);
 //         	return Promise.resolve(data);
 //     	});

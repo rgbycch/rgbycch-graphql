@@ -26,7 +26,12 @@ const schema = new GraphQLSchema({
 		fields: {
 			player: {
 				type: new GraphQLList(PlayerType),
-				resolve: () => getPlayerList()
+				resolve: (__placeholder, {playerId}) => {
+					return getPlayerList(playerId);
+				},
+				args: {
+					playerId: {type: GraphQLString}
+				},
 			},
 			// matchIncidents: {
 			// 	type: new GraphQLList(MatchIncidentType),
