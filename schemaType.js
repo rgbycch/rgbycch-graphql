@@ -6,8 +6,11 @@ import {
 	GraphQLEnumType
 } from 'graphql';
 
+import { getPlayer } from './controller';
+
+
 export const PlayerType = new GraphQLObjectType({
-	name: 'Person',
+	name: 'player',
 	description: 'Describe a player',
 	fields: () => ({
 		playerId: {
@@ -75,11 +78,12 @@ export const MatchIncidentType = new GraphQLObjectType({
 		},
 		playerId: {
 			type: GraphQLString,
-			description: 'Incident player ID'
+			description: 'Incident player ID',
 		},
-		playerName: {
-			type: GraphQLString,
-			description: 'Player name'
+		player: {
+			type: PlayerType,
+			description: 'Incident player',
+			resolve: (matchIncidentType) => getPlayer(matchIncidentType.playerId)
 		},
 		incidentTime: {
 			type: GraphQLString,

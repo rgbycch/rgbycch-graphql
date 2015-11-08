@@ -13,6 +13,11 @@ export const getPlayerList = (playerId) => {
 	return getPlayerDataFromFile(playerId);
 }
 
+export const getPlayer = (playerId) => {
+	console.log("getPlayerList playerId: "+playerId);
+	return getPlayerDataFromFile(playerId);
+}
+
 export const getTeamPlayerList = (teamId) => {
 	console.log("getTeamPlayerList teamId: "+teamId);
 	return getTeamPlayerDataFromFile(teamId);
