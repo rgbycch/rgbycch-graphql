@@ -1,79 +1,129 @@
 [
-	{
-		"playerId": "1",
-		"firstName": "Marc",
-		"lastName": "Stringer",
-		"nickName": "Scrumpy",
-		"dateOfBirth": "1985-12-15",
-		"footDominance": "Right",
-		"handDominance": "Right",
-		"position": [9, 15],
-		"preferredPosition": 9
-	},
-	{
-		"playerId": "3",
-		"firstName": "Jake",
-		"lastName": "Simson",
-		"nickName": "",
-		"dateOfBirth": "1986-10-08",
-		"footDominance": "Neither",
-		"handDominance": "Right",
-		"position": [2, 6, 7, 8, 12, 13],
-		"preferredPosition": 13
-	},
-	{
-		"playerId": "2",
-		"firstName": "Ognjen",
-		"lastName": "Ilic",
-		"nickName": "Oggy",
-		"dateOfBirth": "1985-04-23",
-		"footDominance": "Right",
-		"handDominance": "Right",
-		"position": [6, 7, 8, 11, 12, 13, 14],
-		"preferredPosition": 7
-	},
-	{
-		"playerId": "4",
-		"firstName": "John",
-		"lastName": "LeBlanc",
-		"nickName": "JLB",
-		"dateOfBirth": "1985-12-24",
-		"footDominance": "Right",
-		"handDominance": "Right",
-		"position": [10, 12, 11, 13, 14, 15],
-		"preferredPosition": 12
-	},
-	{
-		"playerId": "5",
-		"firstName": "James",
-		"lastName": "Long",
-		"nickName": "JLo",
-		"dateOfBirth": "1989-04-15",
-		"footDominance": "Either",
-		"handDominance": "Either",
-		"position": [10, 11, 12, 13, 14, 15],
-		"preferredPosition": 10
-	},
-	{
-		"playerId": "8",
-		"firstName": "Nick",
-		"lastName": "Allard",
-		"nickName": "",
-		"dateOfBirth": "1985-09-24",
-		"footDominance": "Neither",
-		"handDominance": "Right",
-		"position": [1, 2, 3, 4, 5, 6],
-		"preferredPosition": 1
-	},
-	{
-		"playerId": "10",
-		"firstName": "Anthony",
-		"lastName": "Soltis",
-		"nickName": "Toro",
-		"dateOfBirth": "1985-07-13",
-		"footDominance": "Neither",
-		"handDominance": "Right",
-		"position": [2, 6, 7, 8],
-		"preferredPosition": 2
-	}
+  {
+	"playerId": "1",
+	"teamId": "1",
+	"firstName": "Marc",
+	"lastName": "Stringer",
+	"nickName": "Scrumpy",
+	"dateOfBirth": "1985-12-15",
+	"footDominance": "Right",
+	"handDominance": "Right",
+	"position": [
+	  9,
+	  15
+	],
+	"preferredPosition": 9
+  },
+  {
+	"playerId": "3",
+	"teamId": "1",
+	"firstName": "Jake",
+	"lastName": "Simson",
+	"nickName": "",
+	"dateOfBirth": "1986-10-08",
+	"footDominance": "Neither",
+	"handDominance": "Right",
+	"position": [
+	  2,
+	  6,
+	  7,
+	  8,
+	  12,
+	  13
+	],
+	"preferredPosition": 13
+  },
+  {
+	"playerId": "2",
+	"firstName": "Ognjen",
+	"lastName": "Ilic",
+	"nickName": "Oggy",
+	"dateOfBirth": "1985-04-23",
+	"footDominance": "Right",
+	"handDominance": "Right",
+	"position": [
+	  6,
+	  7,
+	  8,
+	  11,
+	  12,
+	  13,
+	  14
+	],
+	"preferredPosition": 7
+  },
+  {
+	"playerId": "4",
+	"teamId": "1",
+	"firstName": "John",
+	"lastName": "LeBlanc",
+	"nickName": "JLB",
+	"dateOfBirth": "1985-12-24",
+	"footDominance": "Right",
+	"handDominance": "Right",
+	"position": [
+	  10,
+	  12,
+	  11,
+	  13,
+	  14,
+	  15
+	],
+	"preferredPosition": 12
+  },
+  {
+	"playerId": "5",
+	"teamId": "1",
+	"firstName": "James",
+	"lastName": "Long",
+	"nickName": "JLo",
+	"dateOfBirth": "1989-04-15",
+	"footDominance": "Either",
+	"handDominance": "Either",
+	"position": [
+	  10,
+	  11,
+	  12,
+	  13,
+	  14,
+	  15
+	],
+	"preferredPosition": 10
+  },
+  {
+	"playerId": "8",
+	"teamId": "1",
+	"firstName": "Nick",
+	"lastName": "Allard",
+	"nickName": "",
+	"dateOfBirth": "1985-09-24",
+	"footDominance": "Neither",
+	"handDominance": "Right",
+	"position": [
+	  1,
+	  2,
+	  3,
+	  4,
+	  5,
+	  6
+	],
+	"preferredPosition": 1
+  },
+  {
+	"playerId": "10",
+	"teamId": "1",
+	"firstName": "Anthony",
+	"lastName": "Soltis",
+	"nickName": "Toro",
+	"dateOfBirth": "1985-07-13",
+	"footDominance": "Neither",
+	"handDominance": "Right",
+	"position": [
+	  2,
+	  6,
+	  7,
+	  8
+	],
+	"preferredPosition": 2
+  }
 ]

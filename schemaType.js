@@ -11,8 +11,12 @@ export const PlayerType = new GraphQLObjectType({
 	description: 'Describe a player',
 	fields: () => ({
 		playerId: {
-			type: GraphQLInt,
+			type: GraphQLString,
 			description: 'Player ID number'
+		},
+		teamId: {
+			type: GraphQLString,
+			description: 'Team ID number'
 		},
 		firstName: {
 			type: GraphQLString,
@@ -59,27 +63,27 @@ export const MatchIncidentType = new GraphQLObjectType({
 	fields: () => ({
 		matchId: {
 			type: GraphQLString,
-			description: 'Person first name'
+			description: 'Incident match ID'
 		},
 		incidentId: {
 			type: GraphQLString,
-			description: 'Person last name'
+			description: 'Incident ID'
 		},
 		incidentType: {
-			type: GraphQLInt,
-			description: 'Person Medical Record Number'
+			type: GraphQLString,
+			description: 'Incident type'
 		},
 		playerId: {
-			type: GraphQLInt,
-			description: 'Person payment total'
+			type: GraphQLString,
+			description: 'Incident player ID'
 		},
 		playerName: {
 			type: GraphQLString,
-			description: 'Person last name'
+			description: 'Player name'
 		},
 		incidentTime: {
 			type: GraphQLString,
-			description: 'Person last name'
+			description: 'Incident time'
 		}
 	})
 });
