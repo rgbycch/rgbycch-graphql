@@ -5,7 +5,8 @@ import {
 	getPlayerDataFromFile,
 	getTeamPlayerDataFromFile,
 	getPlayerMatchIncidentDataFromFile,
-	getMatchIncidentDataFromFile
+	getMatchIncidentDataFromFile,
+	getMatchIncidentCommentDataFromFile
 } from './data/stubFunctions';
 
 export const getPlayerList = (playerId) => {
@@ -31,4 +32,9 @@ export const getPlayerMatchIncidentList = (playerId) => {
 export const getMatchIncidentList = (matchId) => {
 	console.log("getMatchIncidentList matchId: "+matchId);
 	return getMatchIncidentDataFromFile(matchId);
+}
+
+export const getMatchIncidentCommentList = (matchId, incidentId) => {
+	console.log("getMatchIncidentCommentList matchId: "+matchId+" | incidentId: "+incidentId);
+	return getMatchIncidentCommentDataFromFile(matchId, incidentId);
 }

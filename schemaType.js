@@ -6,7 +6,7 @@ import {
 	GraphQLEnumType
 } from 'graphql';
 
-import { getPlayer } from './controller';
+import { getPlayer, getMatchIncidentCommentList } from './controller';
 
 
 export const PlayerType = new GraphQLObjectType({
@@ -60,10 +60,41 @@ export const PlayerType = new GraphQLObjectType({
 	})
 });
 
-export const MatchIncidentType = new GraphQLObjectType({
-	name: 'Match Incident',
-	description: 'Describe a match incident',
+export const MatchIncidentCommentType = new GraphQLObjectType({
+	name: 'Match Incident Comment',
+	description: 'Describe a match incident comment',
 	fields: () => ({
+		matchId: {
+			type: GraphQLString,
+			description: 'Incident match ID'
+		},
+		incidentId: {
+			type: GraphQLString,
+			description: 'Incident ID'
+		},
+		commentId: {
+			type: GraphQLString,
+			description: 'Incident Comment ID'
+		},
+		comment: {
+			type: GraphQLString,
+			description: 'The all important comment'
+		},
+		userId: {
+			type: GraphQLString,
+			description: 'Incident Comment Author ID',
+		},
+		incidentCommentTime: {
+			type: GraphQLString,
+			description: 'Incident time'
+		}
+	})
+});
+
+export const MatchIncidentType = new GraphQLObjectType({
+		name: 'Match Incident',
+		description: 'Describe a match incident',
+		fields: () => ({
 		matchId: {
 			type: GraphQLString,
 			description: 'Incident match ID'
@@ -84,6 +115,11 @@ export const MatchIncidentType = new GraphQLObjectType({
 			type: PlayerType,
 			description: 'Incident player',
 			resolve: (matchIncidentType) => getPlayer(matchIncidentType.playerId)
+		},
+		commentList: {
+			type: new GraphQLList(MatchIncidentCommentType),
+			description: 'Incident Comment List',
+			resolve: (matchIncidentType) => getMatchIncidentCommentList(matchIncidentType.matchId, matchIncidentType.incidentId)
 		},
 		incidentTime: {
 			type: GraphQLString,

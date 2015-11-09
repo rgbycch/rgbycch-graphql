@@ -10,6 +10,7 @@ import {
 import { 
 	PlayerType,
 	MatchIncidentType,
+	MatchIncidentCommentType,
 	MatchIncidentTypeEnum,
 	DominanceEnum,
 	PlayerPositionEnum
@@ -19,7 +20,8 @@ import {
 	getPlayerList,
 	getTeamPlayerList,
 	getPlayerMatchIncidentList,
-	getMatchIncidentList
+	getMatchIncidentList,
+	getMatchIncidentCommentList
 } from './controller';
 
 const schema = new GraphQLSchema({
@@ -47,11 +49,21 @@ const schema = new GraphQLSchema({
 			},
 			incidentList: {
 				type: new GraphQLList(MatchIncidentType),
-					resolve: (__placeholder, {matchId}) => {
+				resolve: (__placeholder, {matchId}) => {
 					return getMatchIncidentList(matchId);
 				},
 				args: {
 					matchId: { type: GraphQLString}
+				}
+			},
+			incidentCommentList: {
+				type: new GraphQLList(MatchIncidentCommentType),
+				resolve: (__placeholder, {matchId, incidentId}) => {
+					return getMatchIncidentCommentList(matchId, incidentId);
+				},
+				args: {
+					matchId: { type: GraphQLString},
+					incidentId: { type: GraphQLString}
 				}
 			},
 			count: {
